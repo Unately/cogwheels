@@ -1,4 +1,4 @@
-name: build java
+name: Build Java Packages
 on:
   workflow_dispatch:
   schedule:
@@ -10,13 +10,14 @@ on:
       - java/**
 jobs:
   push:
-    name: "unately:java-${{ matrix.tag }}"
+    name: "Build Java ${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         tag:
           - 17-headless
+          - 8-headless
     steps:
       - uses: actions/checkout@v2
       - uses: docker/setup-qemu-action@v1

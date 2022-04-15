@@ -10,9 +10,9 @@ RUN apt-get -qq update && \
     apt-add-repository "deb http://repos.azul.com/azure-only/zulu/apt stable main" && \
     apt-get -qq update && \
     apt-get -qq -y dist-upgrade && \
-    apt-get -qq -y --no-install-recommends install zulu-17-azure-jre-headless=17.28+13* && \
+    apt-get -qq -y --no-install-recommends install zulu-8-azure-jre-headless=8.58.0.13* && \
     apt-get -qq -y purge gnupg software-properties-common && \
     apt -y autoremove && \
     rm -rf /var/lib/apt/lists/*
 
-ENV JAVA_HOME=/usr/lib/jvm/zre-hl-17-azure-amd64
+ENV JAVA_HOME=/usr/lib/jvm/zre-hl-8-azure-amd64
