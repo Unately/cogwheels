@@ -9,4 +9,4 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN  dpkg --add-architecture i386 \
 	 && apt update \
 	 && apt dist-upgrade -y \
-	 && apt -y --no-install-recommends install grep ca-certificates curl zip unzip lib32gcc-s1 libsdl2-2.0-0:i386 git wget bash dos2unix
+	 && apt -y --no-install-recommends install grep ca-certificates curl zip unzip openjdk-17-jre-headless lib32gcc-s1 libsdl2-2.0-0:i386 git wget bash dos2unix
