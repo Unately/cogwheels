@@ -1,2 +1,1 @@
-# cogwheels
-The core Docker images for deployment of many things.
+# Moved to [uPackages](https://github.com/upackages)
